@@ -1,0 +1,35 @@
+package assignment;
+
+import java.util.*;
+
+public class assignment1a {
+
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+	
+		double rate, amount, mpay, tpay;
+		int years;
+		
+		System.out.print("Enter the yearly interest rate, for example, 3.5: ");
+		rate = sc.nextDouble();
+		
+		System.out.print("Enter the number of years as an integer, for example, 5: ");
+		years = sc.nextInt();
+		
+		System.out.print("Enter the loan amount, for example, 3000.00: ");
+		amount = sc.nextDouble();
+	
+		mpay = amount *( rate / 100);
+		mpay = Math.round(mpay);
+		tpay = years * 12 * mpay;
+		tpay = Math.round(tpay);
+		
+		System.out.println("The monthly payment is $" + mpay); 
+		System.out.println("The total payment is $" + tpay);
+		
+		
+
+	}
+
+}
